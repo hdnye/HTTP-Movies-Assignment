@@ -28,13 +28,13 @@ const UpdateMovie = props =>  {
 
     const handleSubmit = e => {
         e.preventDefault();
-
+        
         const starsSplitter = {
             ...movie,
             stars: movie.stars.split('', ''),
         }  
         axios
-            .put(`https://localhost:5000/api/movies/${movie.id}`, starsSplitter)
+            .put(`http://localhost:5000/api/movies/${props.id}`, starsSplitter)
             .then(res => {
             console.log(res.data);
             document.querySelector('form').reset();
