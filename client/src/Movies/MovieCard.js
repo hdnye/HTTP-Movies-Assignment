@@ -1,9 +1,11 @@
 import React from 'react';
+import UpdateMovie from './UpdateMovie';
 
 const MovieCard = props => {
   const { title, director, metascore, stars } = props.movie;
   return (
     <div className="movie-card">
+      <UpdateMovie />
       <h2>{title}</h2>
       <div className="movie-director">
         Director: <em>{director}</em>
