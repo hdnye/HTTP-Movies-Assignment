@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-
+import { Button, Form, FormGroup, Label, Input,  } from 'reactstrap';
 const formStyle = {
     background: 'lightskyblue',
     
@@ -45,45 +45,49 @@ const UpdateMovie = props =>  {
         
         return (
             <div className='form'>
-             <form  onSubmit={handleSubmit}>
-                  <label htmlFor='title'></label>
-                   <input style={formStyle}
+             <Form  onSubmit={handleSubmit}>
+               <FormGroup>
+                  <Label htmlFor='title'></Label>
+                   <Input style={formStyle}
                      type='text'
                      name='title'
                      placeholder='Title'
                      onChange={handleChange}
                      value={movie.title}
                     /><br />
-                   
+                 </FormGroup>
+                 <FormGroup> 
                    <label htmlFor='director'></label>
-                    <input style={formStyle}
+                    <Input style={formStyle}
                      type='text'
                      name='director'
                      placeholder='Director'
                      onChange={handleChange}
                      value={movie.director}
                     /><br />
-                    
+                  </FormGroup> 
+                  <FormGroup>    
                     <label htmlFor='metascore'></label>
-                     <input style={formStyle}
+                     <Input style={formStyle}
                      type='text'
                      name='metascore'
                      placeholder='Metascore'
                      onChange={handleChange}
                      value={movie.metascore}
                     /><br />
-                  
+                  </FormGroup> 
+                  <FormGroup> 
                     <label htmlFor='stars'></label>
-                     <input style={formStyle}
+                     <Input style={formStyle}
                      type='text'
                      name='stars'
                      placeholder='Starring'
                      onChange={handleChange}
                      value={movie.stars}
                     /><br />
-                   
-                  <button className='update-button'>Update!</button>  
-               </form><br />
+                  </FormGroup>  
+                  <Button className='update-button'>Update!</Button>  
+               </Form><br />
              </div> 
             )
          }
