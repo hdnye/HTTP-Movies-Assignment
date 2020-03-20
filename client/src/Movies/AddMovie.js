@@ -8,7 +8,7 @@ const AddMovie = props => {
         title:'' ,
         director: '' ,
         metascore: '',
-        stars: ''
+        stars: []
     });
 
 /* add event handlers here */
@@ -23,8 +23,13 @@ const handleChange = e => {
 const handleSubmit = e => {
     console.log('I submit');
     e.preventDefault();
+    
+    const starsSplitter = {
+        ...newMovie,
+        stars: newMovie.stars.split('', '')
+    }  
     axios
-    .post('http://localhost:5000/api/movies', newMovie)
+    .post('http://localhost:5000/api/movies', starsSplitter, newMovie)
     .then(res => {
         console.log(res.data)
         document.querySelector('form').reset();
