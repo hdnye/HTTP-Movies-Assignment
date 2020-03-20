@@ -35,12 +35,13 @@ let movies = [
     director: "James Cameron",
     metascore: 94,
     stars: ["Arnold Schwarzenegger", "Edward Furlong", "Linda Hamilton"]
-  },
+   },
   {
     id: 4,
     title: "Dumb and Dumber",
     director: "The Farely Brothers",
     metascore: 76,
+    image: '/Images/d&dmeme.jpg',
     stars: ["Jim Carrey", "Jeff Daniels", "Lauren Holly"]
   },
   {

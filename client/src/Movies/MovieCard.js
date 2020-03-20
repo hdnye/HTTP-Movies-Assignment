@@ -1,6 +1,8 @@
 import React from 'react';
 import UpdateMovie from './UpdateMovie';
 
+
+
 const MovieCard = props => {
   const { id, title, director, metascore, image, stars } = props.movie;
  
@@ -16,8 +18,7 @@ const MovieCard = props => {
         Metascore: <strong>{metascore}</strong>
       </div>
       <h3>Actors</h3>
-
-      {stars && stars.map(star => (
+      {props.stars && props.stars.map(star => (
         <div key={star} className="movie-star">
           {star}
         </div>
